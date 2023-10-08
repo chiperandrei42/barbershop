@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -45,54 +46,63 @@
       </section>
     </header>
 
+    <section>
+      <hr />
+      <span>A hair salon for men in Kyiv</span>
+      <h1>BarberShop</h1>
+      <p>
+        We are experts in trendy men's haircuts. We work quickly, carefully, and
+        tastefully.
+      </p>
+    </section>
+
     <main>
-      <section>
-        <hr />
-        <span>A hair salon for men in Kyiv</span>
-        <h1>BarberShop</h1>
-        <p>
-          We are experts in trendy men's haircuts. We work quickly, carefully,
-          and tastefully.
-        </p>
-      </section>
-
       <!-- About Section -->
-      <section>
-        <div>
-          <img
-            src="./images/barber-img-1.png"
-            alt="Frizer pune spuma de ras"
-            width="100px"
-          />
-          <img
-            src="./images/barber-img-2.png"
-            alt="Frizer barbiereste cu briceag"
-          />
+      <section id="about" class="section section-light about-section">
+        <div class="container">
+          <div class="section-with-two-columns">
+            <div class="section-images">
+              <img
+                src="./images/barber-img-1.png"
+                alt="Frizer pune spuma de ras"
+              />
+              <img
+                src="./images/barber-img-2.png"
+                alt="Frizer barbiereste cu briceag"
+              />
+            </div>
+            <div>
+              <div class="section-description">
+                <div class="heading-with-dash">
+                  <img
+                    src="./images/horizontal-dash.svg"
+                    alt="Horizontal Dash"
+                  />
+                  <h3 class="section-sub-heading">About</h3>
+                </div>
+                <h2 class="section-heading">
+                  The Best Barbershop in Your City
+                </h2>
+                <p>
+                  If you want to add more confidence to your image, you are
+                  definitely in the right place.
+                </p>
+                <p class="small-text">
+                  We are a team that never rests on its laurels and yearns for
+                  change. And once you fall into the hands of our master, you
+                  will never be the same again. We are a team that is always on
+                  the same wavelength with clients. Therefore, we are always
+                  ready to improve everyone who comes to us!
+                </p>
+              </div>
+              <button class="button">Book a service</button>
+            </div>
+          </div>
         </div>
-
-        <div>
-          <img src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
-          <span>About</span>
-        </div>
-
-        <h2>The Best Barbershop in Your City</h2>
-        <h3>
-          If you want to add more confidence to your image, you are definitely
-          in the right place.
-        </h3>
-        <p>
-          We are a team that never rests on its laurels and yearns for change.
-          And once you fall into the hands of our master, you will never be the
-          same again. We are a team that is always on the same wavelength with
-          clients. Therefore, we are always ready to improve everyone who comes
-          to us!
-        </p>
-
-        <button class="button">Book a Service</button>
       </section>
 
       <!-- Services and Prices Section -->
-      <section id="services" class="prices-section">
+      <section id="services" class="section section-dark prices-section">
         <div class="section-description">
           <div class="heading-with-dash">
             <img src="./images/horizontal-dash.svg" alt="Horizontal Dash" />
@@ -110,14 +120,17 @@
             </li>
             <li>
               <span>Beard Trim</span>
+              <span class="prices-dash"></span>
               <span>from 200 UAH</span>
             </li>
             <li>
               <span>Mustache Trim</span>
+              <span class="prices-dash"></span>
               <span>from 200 UAH</span>
             </li>
             <li>
               <span>Straight Razor Shave</span>
+              <span class="prices-dash"></span>
               <span>from 200 UAH</span>
             </li>
           </ul>
@@ -125,24 +138,30 @@
           <ul class="prices-list">
             <li>
               <span>Trainee Haircut</span>
+              <span class="prices-dash"></span>
               <span>from 50 UAH</span>
             </li>
             <li>
               <span>Buzz Cut</span>
+              <span class="prices-dash"></span>
               <span>from 200 UAH</span>
             </li>
             <li>
               <span>Kids Haircut (&lt;12 y.o.)</span>
+              <span class="prices-dash"></span>
               <span>from 300 UAH</span>
             </li>
             <li>
               <span>Gray Coverage</span>
+              <span class="prices-dash"></span>
               <span>from 200 UAH</span>
             </li>
           </ul>
         </div>
 
-        <button class="button">Book a Service</button>
+        <div class="centered-container">
+          <button data-modal-open class="button">Book a Service</button>
+        </div>
       </section>
 
       <!-- Old School Section -->
@@ -194,5 +213,15 @@
         <span>Extreme Barber</span>
       </section>
     </main>
+
+    <!-- Book Service Modal -->
+    <div class="modal is-hidden" data-modal>
+      <div class="modal-content">
+        <button class="close-btn" data-modal-close>&times;</button>
+        Continut modal
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
